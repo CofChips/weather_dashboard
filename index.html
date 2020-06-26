@@ -25,17 +25,17 @@
                     <div class="form-row align-items-center">
                         <div class="col">
                             <label class="form-check-label py-3" for="autoSizingCheck">
-                                Search for a city:
+                                <h3>Search for a city:</h3>
                             </label>
                         </div>
                     </div>
                     <div class="form-row align-items-center">
                         <div class="col">
                             <label class="sr-only" for="inlineFormInput">Name</label>
-                            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="City">
+                            <input type="text" class="form-control mb-2" id="cityFormInput" placeholder="City">
                         </div>
                         <div class="col">
-                            <button type="submit" class="btn btn-primary mb-2">Search</button>
+                            <button type="submit" class="btn btn-primary mb-2" id="buttonCitySearch">Search</button>
                         </div>
                     </div>
                 </form>
@@ -51,10 +51,11 @@
                 <div class="row">
                     <div class="col-12 py-4 bg-warning">
                         <header>
-                            <h1>City</h1>
-                            <p>Temperature:</p>
-                            <p>Humidity:</p>
-                            <p>Wind Speed:</p>
+                            <h1 id="displayCity">City</h1>
+                            <img id="iconDisplay">
+                            <p id="tempDisplay">Temperature:</p>
+                            <p id="humidityDisplay">Humidity:</p>
+                            <p id="windSpeedDisplay">Wind Speed:</p>
                             <p>UV Index:</p>
                         </header>
                     </div>
@@ -149,7 +150,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <sript src="script.js"></sript>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
