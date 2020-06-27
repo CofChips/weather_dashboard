@@ -15,17 +15,17 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand m-auto h1">Weather Dashboard</span>
+        <span class="navbar-brand m-auto" style="font-size: 45px; font-weight: bold;">Weather Dashboard</span>
     </nav>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 bg-info">
+            <div class="col-md-3 bg-secondary">
                 <form>
                     <div class="form-row align-items-center">
                         <div class="col">
                             <label class="form-check-label py-3" for="autoSizingCheck">
-                                <h3>Search for a city:</h3>
+                                <h3 class="text-white">Search for a city:</h3>
                             </label>
                         </div>
                     </div>
@@ -35,19 +35,20 @@
                             <input type="text" class="form-control mb-2" id="cityFormInput" placeholder="City">
                         </div>
                         <div class="col">
-                            <button type="submit" value = "Submit" class="btn btn-primary mb-2" id="buttonCitySearch">Search</button>
+                            <button type="submit" value="Submit" class="btn btn-primary mb-2"
+                                id="buttonCitySearch">Search</button>
                         </div>
                     </div>
                 </form>
                 <div class="card d-none d-md-block" style="width: 75%;">
                     <ul class="list-group list-group-flush" id="savedCities">
-                        
+
                     </ul>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-12 py-4 bg-warning">
+                    <div class="col-12 py-4 bg-light">
                         <header>
                             <h1 id="displayCity">City</h1>
                             <img id="iconDisplay">
@@ -60,7 +61,7 @@
                 </div>
                 <div class="row">
                     <!-- <div class = "row"> -->
-                    <div class="col-12 bg-secondary">
+                    <div class="col-12">
                         <header>
                             <h2>5-day Forecast</h2>
                         </header>
@@ -68,62 +69,62 @@
                     </div>
                     <div class="row m-0">
                         <div class="col bg-white">
-                            <div class="card w-100">
-                                <div class="card-body">
+                            <div class="card w-100 bg-info">
+                                <div class="card-body text-white">
                                     <h5 class="card-title" id="forecast1">Forecast Date</h5>
                                     <img id="iconDisplay1">
                                     <p class="card-text" id="temp1">Temperature:</p>
                                     <p class="card-text" id="humidity1">Humidity:</p>
-                                    
-                                   
+
+
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card w-100">
-                                <div class="card-body">
+                            <div class="card w-100 bg-info">
+                                <div class="card-body text-white">
                                     <h5 class="card-title" id="forecast2">Forecast Date</h5>
                                     <img id="iconDisplay2">
                                     <p class="card-text" id="temp2">Temperature:</p>
                                     <p class="card-text" id="humidity2">Humidity:</p>
-                                    
-                                   
+
+
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card w-100">
-                                <div class="card-body">
+                            <div class="card w-100 bg-info">
+                                <div class="card-body text-white">
                                     <h5 class="card-title" id="forecast3">Forecast Date</h5>
                                     <img id="iconDisplay3">
                                     <p class="card-text" id="temp3">Temperature:</p>
                                     <p class="card-text" id="humidity3">Humidity:</p>
-                                    
-                                   
+
+
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card w-100">
-                                <div class="card-body">
+                            <div class="card w-100 bg-info">
+                                <div class="card-body text-white">
                                     <h5 class="card-title" id="forecast4">Forecast Date</h5>
                                     <img id="iconDisplay4">
                                     <p class="card-text" id="temp4">Temperature:</p>
                                     <p class="card-text" id="humidity4">Humidity:</p>
-                                    
-                                   
+
+
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card w-100">
-                                <div class="card-body">
+                            <div class="card w-100 bg-info">
+                                <div class="card-body text-white">
                                     <h5 class="card-title" id="forecast5">Forecast Date</h5>
                                     <img id="iconDisplay5">
                                     <p class="card-text" id="temp5">Temperature:</p>
                                     <p class="card-text" id="humidity5">Humidity:</p>
-                                    
-                                   
+
+
                                 </div>
                             </div>
                         </div>
