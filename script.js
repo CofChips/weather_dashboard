@@ -91,25 +91,22 @@ $(document).ready(function () {
                     console.log("all in one: " + JSON.stringify(response));
                     console.log("uvi: " + response.current.uvi)
                     var uvi = response.current.uvi;
-                    var uviDisplay = $("<div>");
-                    uviDisplay.text(uvi);
-                    uviDisplay.addClass("text-center");
+                    $("#uviDisplay").text(" "+uvi);
                     if (uvi < 3) {
-                        uviDisplay.attr("style", "background-color:green;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:green;color: white;");
                     }
                     else if (uvi >= 3 && uvi < 6) {
-                        uviDisplay.attr("style", "background-color:yellow;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: blue;");
+                        $("#uviDisplay").attr("style", "background-color:yellow;color: blue;");
                     }
                     else if (uvi >= 6 && uvi < 8) {
-                        uviDisplay.attr("style", "background-color:orange;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:orange;color: white;");
                     }
                     else if (uvi >= 8 && uvi < 11) {
-                        uviDisplay.attr("style", "background-color:red;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:red;color: white;");
                     }
                     else {
-                        uviDisplay.attr("style", "background-color:purple;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:purple;color: white;");
                     }
-                    $("#todayWeather").append(uviDisplay)
                     // today
                     var timestampInMilliSecondsToday = response.current.dt * 1000;
                     var dateToday = new Date(timestampInMilliSecondsToday);
@@ -285,25 +282,22 @@ $(document).ready(function () {
                     console.log("all in one: " + JSON.stringify(response));
                     console.log("uvi: " + response.current.uvi)
                     var uvi = response.current.uvi;
-                    var uviDisplay = $("<div>");
-                    uviDisplay.text(uvi);
-                    uviDisplay.addClass("text-center");
+                    $("#uviDisplay").text(" "+uvi);
                     if (uvi < 3) {
-                        uviDisplay.attr("style", "background-color:green;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:green;color: white;");
                     }
                     else if (uvi >= 3 && uvi < 6) {
-                        uviDisplay.attr("style", "background-color:yellow;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: blue;");
+                        $("#uviDisplay").attr("style", "background-color:yellow;color: blue;");
                     }
                     else if (uvi >= 6 && uvi < 8) {
-                        uviDisplay.attr("style", "background-color:orange;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:orange;color: white;");
                     }
                     else if (uvi >= 8 && uvi < 11) {
-                        uviDisplay.attr("style", "background-color:red;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:red;color: white;");
                     }
                     else {
-                        uviDisplay.attr("style", "background-color:purple;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                        $("#uviDisplay").attr("style", "background-color:purple;color: white;");
                     }
-                    $("#todayWeather").append(uviDisplay)
                     // today
                     var timestampInMilliSecondsToday = response.current.dt * 1000;
                     var dateToday = new Date(timestampInMilliSecondsToday);
