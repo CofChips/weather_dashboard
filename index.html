@@ -20,7 +20,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 bg-info">
+            <div class="col-md-3 bg-info">
                 <form>
                     <div class="form-row align-items-center">
                         <div class="col">
@@ -35,19 +35,17 @@
                             <input type="text" class="form-control mb-2" id="cityFormInput" placeholder="City">
                         </div>
                         <div class="col">
-                            <button type="submit" class="btn btn-primary mb-2" id="buttonCitySearch">Search</button>
+                            <button type="submit" value = "Submit" class="btn btn-primary mb-2" id="buttonCitySearch">Search</button>
                         </div>
                     </div>
                 </form>
-                <div class="card" style="width: 15rem;">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
+                <div class="card d-none d-md-block" style="width: 75%;">
+                    <ul class="list-group list-group-flush" id="savedCities">
+                        
                     </ul>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-md-9">
                 <div class="row">
                     <div class="col-12 py-4 bg-warning">
                         <header>
