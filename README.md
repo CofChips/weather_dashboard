@@ -1,7 +1,7 @@
 # Weather Dashboard
 
 ## Background
-The objective of this exercise was to create utilize a 3rd party API to build a Weather Dashboard with dynamically updated HTML and CSS.
+The objective of this exercise was to create utilize a server side API to build a Weather Dashboard with dynamically updated HTML and CSS.
 
 Acceptance criteria is as follows:
 
@@ -25,11 +25,11 @@ THEN I am again presented with current and future conditions for that city
 ## Approach
 
 There were a few key areas to focus on in this project:
-1) Access and parse 3rd party API data
+1) Access and parse server side API data
 2) Dynamically update HTML and CSS 
 
 
-### Accessing and parsing 3rd part API data
+### Accessing and parsing server side API data
 
 For this project, the OpenWeather API was utilized for accessing weather data.  As not required fields were included in any single data collection, both the Current Weather Data and One Call API data collections were utilized.
 

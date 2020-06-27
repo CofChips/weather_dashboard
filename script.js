@@ -58,7 +58,6 @@ $(document).ready(function () {
         function populateTop(event) {
             event.preventDefault();
             cityName = $("#cityFormInput").val().trim();
-
             console.log(cityName);
             // accesses the Current Weather Data collection
             var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid="+APIkey
@@ -243,7 +242,7 @@ $(document).ready(function () {
             li.text(newCity[i]);
             li.addClass("list-group-item newCity");
             li.attr("data-value", newCity[i]);
-            $("#savedCities").append(li);
+            $("#savedCities").prepend(li);
         }
     }
 
@@ -416,6 +415,14 @@ $(document).ready(function () {
         }
     }
     $(document).on("click", ".newCity", loadCity);
+
+    $("#buttonCityClear").on("click",clearCity);
+
+    function clearCity(){
+    localStorage.clear();
+    $("#savedCities").html("");
+    newCity = [];
+    }
 
 
 
