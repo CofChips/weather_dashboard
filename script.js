@@ -60,16 +60,14 @@ $(document).ready(function () {
             cityName = $("#cityFormInput").val().trim();
 
             console.log(cityName);
-            var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid="+APIkey
-
+            // accesses the Current Weather Data collection
+            var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid="+APIke
 
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
-
-
                 var name = response.name;
                 var icon = response.weather[0].icon;
                 var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
@@ -84,6 +82,7 @@ $(document).ready(function () {
                 lon = response.coord.lon;
                 console.log("lat: " + lat);
                 console.log("lon: " + lon);
+                // Accesses the One Call API data collection with latitude and longitude from above
                 var query2URL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&" +
                     "exclude=minutely,hourly&units=imperial&appid="+APIkey;
                 $.ajax({
