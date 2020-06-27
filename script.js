@@ -56,7 +56,7 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
-                $("#buttonCitySearch").clear();
+
 
                 var name = response.name;
                 var icon = response.weather[0].icon;
