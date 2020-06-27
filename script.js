@@ -61,7 +61,7 @@ $(document).ready(function () {
 
             console.log(cityName);
             // accesses the Current Weather Data collection
-            var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid="+APIke
+            var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid="+APIkey
 
             $.ajax({
                 url: queryURL,
