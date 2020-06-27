@@ -33,7 +33,7 @@ $(document).ready(function () {
 
     init();
 
-    // populates highScoreList with localStorage if there are values and populates the high score screen
+    // populates cities buttons with localStorage if there are values
     function init() {
         var storedCities = JSON.parse(localStorage.getItem("cityList"));
         if (storedCities !== null) {
@@ -56,6 +56,7 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
+                $("#buttonCitySearch").clear();
 
                 var name = response.name;
                 var icon = response.weather[0].icon;
@@ -80,7 +81,27 @@ $(document).ready(function () {
                     console.log("all in one: " + JSON.stringify(response));
                     console.log("uvi: " + response.current.uvi)
                     var uvi = response.current.uvi;
-                    $("#uviDisplay").text("UV Index: " + uvi);
+                    var uviDisplay = $("<div>");
+                    uviDisplay.text(uvi);
+                    uviDisplay.addClass("text-center");
+                    // uviDisplay.attr("style","width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;")
+                    if(uvi < 3){
+                        uviDisplay.attr("style","background-color:green;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    else if(uvi >=3 && uvi <6){
+                        uviDisplay.attr("style","background-color:yellow;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: blue;");
+                    }
+                    else if(uvi >=6 && uvi <8){
+                        uviDisplay.attr("style","background-color:orange;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    else if(uvi >=8 && uvi <11){
+                        uviDisplay.attr("style","background-color:red;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    else{
+                        uviDisplay.attr("style","background-color:purple;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    $("#todayWeather").append(uviDisplay)
+
                     // today
                     var timestampInMilliSeconds = response.current.dt * 1000;
                     var date = new Date(timestampInMilliSeconds);
@@ -173,11 +194,7 @@ $(document).ready(function () {
                         localStorage.setItem("cityList", JSON.stringify(newCity));
                         console.log(newCity);
                     }
-                    // addCity.text(name);
-                    // addCity.attr("data-value", name.replace(/\s+/g, ''));
-                    // addCity.attr("id", "button" + name.replace(/\s+/g, ''));
-                    // addCity.addClass("list-group-item");
-                    // $("#savedCities").prepend(addCity);
+   
                     if (formattedFull === formattedFull0) {
                         forecastDate1.text(formattedFull1);
                         forecastDate2.text(formattedFull2);
@@ -284,7 +301,27 @@ $(document).ready(function () {
                     console.log("all in one: " + JSON.stringify(response));
                     console.log("uvi: " + response.current.uvi)
                     var uvi = response.current.uvi;
-                    $("#uviDisplay").text("UV Index: " + uvi);
+                    var uviDisplay = $("<div>");
+                    uviDisplay.text(uvi);
+                    uviDisplay.addClass("text-center");
+                    // uviDisplay.attr("style","width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;")
+                    if(uvi < 3){
+                        uviDisplay.attr("style","background-color:green;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    else if(uvi >=3 && uvi <6){
+                        uviDisplay.attr("style","background-color:yellow;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: blue;");
+                    }
+                    else if(uvi >=6 && uvi <8){
+                        uviDisplay.attr("style","background-color:orange;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    else if(uvi >=8 && uvi <11){
+                        uviDisplay.attr("style","background-color:red;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    else{
+                        uviDisplay.attr("style","background-color:purple;width: 43px; height: 22px; position: absolute; bottom: 11%; left: 7.5%; color: white;");
+                    }
+                    $("#todayWeather").append(uviDisplay)
+                    // $("#uviDisplay").text(uvi);
                     // today
                     var timestampInMilliSeconds = response.current.dt * 1000;
                     var date = new Date(timestampInMilliSeconds);
@@ -376,11 +413,7 @@ $(document).ready(function () {
                     //     newCity.push(name);
                     //     console.log(newCity);
                     // }
-                    // addCity.text(name);
-                    // addCity.attr("data-value", name.replace(/\s+/g, ''));
-                    // addCity.attr("id", "button" + name.replace(/\s+/g, ''));
-                    // addCity.addClass("list-group-item");
-                    // $("#savedCities").prepend(addCity);
+
                     if (formattedFull === formattedFull0) {
                         forecastDate1.text(formattedFull1);
                         forecastDate2.text(formattedFull2);
@@ -438,7 +471,23 @@ $(document).ready(function () {
     }
         $(document).on("click", ".newCity",loadCity);
 
-
+function uviColor() {
+    if(uvi < 3){
+        uviDisplay.attr("style","background-color:green");
+    }
+    else if(uvi >=3 && uvi <6){
+        uviDisplay.attr("style","background-color:yellow");
+    }
+    else if(uvi >=6 && uvi <8){
+        uviDisplay.attr("style","background-color:orange");
+    }
+    else if(uvi >=8 && uvi <11){
+        uviDisplay.attr("style","background-color:red");
+    }
+    else{
+        uviDisplay.attr("style","background-color:purple");
+    }
+}
 
         // var timestampInMilliSeconds = 1593180342 * 1000;
         // var date = new Date(timestampInMilliSeconds);
