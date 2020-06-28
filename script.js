@@ -67,6 +67,7 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
+                $("img").attr("style","display:inline-block");
                 var name = response.name;
                 var icon = response.weather[0].icon;
                 var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
@@ -258,7 +259,7 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
-
+                $("img").attr("style","display:inline-block");
                 var name = response.name;
                 var icon = response.weather[0].icon;
                 var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
